@@ -7,7 +7,7 @@ urlpatterns = [
     path('',views.index,name='index'),
     path('creaTema',views.creaTema,name='creaTema'),
     path('creaArticulo',views.creaArticulo,name='creaArticulo'),
-    path('listaArticuloPorTema',views.listaArticuloPorTema,name='listaArticuloPorTema'),
-    path('listaArticulo',views.listaArticulo,name='listaArticulo'),
-    path('busqueda',views.busqueda,name='busqueda'),
+    path('listaArticuloPorTema/<str:idTema>',views.listaArticuloPorTema,name='listaArticuloPorTema'),
+    path('verArticulo/<str:idArticulo>',views.verArticulo,name='verArticulo'),
+    path('busqueda',views.busqueda,name='busqueda')  
 ]

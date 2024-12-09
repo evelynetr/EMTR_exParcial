@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block titulo %}
+    Artículo:  {{ objArticulo.tituloArticulo }}
+{% endblock %}
+
+{% block contenido %}
+    <h3>{{ objArticulo.tituloArticulo }}</h3>
+    <p> 
+        {{ objArticulo.contenidoArticulo }}
+    </p>
+{% endblock %}
