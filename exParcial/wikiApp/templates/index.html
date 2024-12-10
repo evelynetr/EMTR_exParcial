@@ -5,5 +5,17 @@
 {% endblock %}
 
 {% block contenido %}
-    P&aacute;gina principal
+    <h3>P&aacute;gina principal de WikiApp</h3>
+    </br>
+    <div>
+        <a href="{% url 'wikiApp:creaTema' %}">
+            <button type="button" class="btn btn-secondary " >Crear nuevo tema</button>
+        </a>
+    </div>
+    </br>
+    <div>                        
+        <a href="{% url 'wikiApp:creaArticulo' %}">
+            <button type="button" class="btn btn-secondary " >Crear nuevo art&iacute;culo</button>
+        </a>
+    </div>
 {% endblock %}

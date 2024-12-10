@@ -15,10 +15,19 @@
             </div>
             <div class="position-absolute bottom-0 start-0 w-100 h-75 row ">
                 <div class="col-3 bg-dark text-light p-4">
+                    
+                    <form class="row row-cols-lg-auto g-3 align-items-center" method="post" action="{% url 'wikiApp:busqueda' ' ' %}">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input name="bsqArticulo" type="text" class="form-control" placeholder="Palabra a buscar">
+                            <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+                        </div>
+                    </form>
+                    <br><br>
                     <h4>Temas Registrados</h4>                 
                     {% for temaInfo in temaTodos %}
                     <div>
-                        <a href="{% url 'wikiApp:listaArticuloPorTema' temaInfo.id %}">({{ temaInfo.id }}) {{ temaInfo.nombreTema }} </a>
+                        <a href="{% url 'wikiApp:listaArticuloPorTema' temaInfo.id %}">{{ temaInfo.nombreTema }} </a>
                     </div> 
                     {% endfor %} 
                     </br>

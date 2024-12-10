@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} 
 
 {% block titulo %}
     Nuevo Art&iacute;culo
@@ -27,7 +27,8 @@
             <textarea name="contenidoArticulo" class="form-control" rows="6" cols="50" placeholder="Contenido"></textarea>
         </div>
         <div class="col-12">
-            <input type="submit" class="btn btn-info" value="Enviar">
+            <input type="submit" class="btn btn-info" value="Enviar"></br></br>
+            <a href="{% url 'wikiApp:index' %}"> << Regresar al inicio >></a>
         </div>
     </div>
 </form>

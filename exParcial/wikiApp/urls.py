@@ -9,5 +9,5 @@ urlpatterns = [
     path('creaArticulo',views.creaArticulo,name='creaArticulo'),
     path('listaArticuloPorTema/<str:idTema>',views.listaArticuloPorTema,name='listaArticuloPorTema'),
     path('verArticulo/<str:idArticulo>',views.verArticulo,name='verArticulo'),
-    path('busqueda',views.busqueda,name='busqueda')  
+    path('busqueda/<str:palabraBusq>',views.busqueda,name='busqueda')  
 ]

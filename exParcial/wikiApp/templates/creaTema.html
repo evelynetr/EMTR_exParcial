@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} 
 
 {% block titulo %}
     Nuevo Tema
@@ -18,7 +18,8 @@
             <input type="text" class="form-control" name="descripcionTema" placeholder="Describe el tema propuesto">
         </div>
         <div class="col-12">
-            <input type="submit" class="btn btn-info" value="Enviar">
+            <input type="submit" class="btn btn-info" value="Enviar"> </br></br>
+            <a href="{% url 'wikiApp:index' %}"> << Regresar al inicio >></a>
         </div>
     </div>
 </form>

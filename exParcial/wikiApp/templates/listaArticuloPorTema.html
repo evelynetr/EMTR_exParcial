@@ -9,14 +9,7 @@
     <ol>
         {% for articuloInfo in listaArticulos %}
         <li>
-            <a href="{% url 'wikiApp:verArticulo' articuloInfo.id %}">({{articuloInfo.id}}) {{ articuloInfo.tituloArticulo }}</a>
-            
-            <!--<ul>
-                <li>Nombre : {{ usuarioInfo.nombreUsuario }}</li>
-                <li>Telefono : {{ usuarioInfo.numeroUsuario }}</li>
-                <li>Direccion : {{ usuarioInfo.direccionUsuario }}</li>
-                <li>Area : {{ usuarioInfo.areaR.nombreArea }}</li>
-            </ul>-->
+            <a href="{% url 'wikiApp:verArticulo' articuloInfo.id %}">{{ articuloInfo.tituloArticulo }}</a>
         </li>
         {% endfor %}
         

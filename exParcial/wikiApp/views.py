@@ -57,6 +57,16 @@ def verArticulo(request,idArticulo):
         'temaTodos':temaWiki.objects.all()
     })
 
-def busqueda(request):
-    return render(request, 'busqueda.html')
+def busqueda(request, palabraBusq):
+    if request.method == 'POST':
+        palabraBusq = request.POST.get('bsqArticulo')
+        """return HttpResponseRedirect(reverse('wikiApp:busqueda palabraBusq '))"""
+        return render(request, 'busqueda.html',{
+            'palabraBusq':palabraBusq,
+            'listaArticulos':articuloWiki.objects.all(),
+            'temaTodos':temaWiki.objects.all() 
+        }) 
+    return render(request, 'busqueda.html',{
+        'temaTodos':temaWiki.objects.all() 
+    }) 
 
